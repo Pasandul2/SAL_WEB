@@ -1,0 +1,167 @@
+.product{
+    display: flex;
+    margin: 5%;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+
+
+.img{
+    .img {
+        overflow: hidden; 
+        display: inline-block;
+    }
+}
+
+.img img{
+    width: 400px;
+    height: auto; 
+    transition: transform 0.3s ease;
+    padding-right: 20px;
+}
+
+.img:hover img {
+    transform: scale(1.1); 
+}
+
+
+.details h1{
+    padding-top: 20px;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.details p{
+    font-size: 16px;
+}
+
+.indetail{
+    font-weight: bold;
+    color: #0000009f;
+}
+
+.details button{
+    color: white;
+    background-color: #e43731;
+    border-radius: 10px;
+    border-color:#e43731;
+    padding: 10px;
+    margin:40px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.details button:hover{
+    border-color: #ffffff;
+    
+}
+
+/* Table css */
+
+/* General Table Container Styling */
+.tbl {
+    width: 100%;
+    margin: 20px auto;
+    overflow-x: auto; /* Enables horizontal scroll for small screens */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Table Header Styling */
+th {
+    background-color: #e43731da; /* Blue header background */
+    color: #ffffff; /* White text */
+    font-weight: bold;
+    padding: 12px 15px;
+}
+
+/* Table Data Cells */
+td, th {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+/* Alternating Row Colors */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #e9ecef; /* Light gray hover effect */
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Responsive Table - Small Screens */
+@media (max-width: 768px) {
+    table {
+        font-size: 14px; /* Reduce font size for better fit */
+    }
+    th, td {
+        padding: 8px 10px; /* Adjust padding */
+    }
+}
+
+@media (max-width: 480px) {
+    table {
+
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    thead {
+        display: none; /* Hide table header on small screens */
+    }
+
+    tr {
+        display: block;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+    }
+
+    td {
+        display: block;
+        text-align: right;
+        padding: 10px;
+        position: relative;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+        text-transform: capitalize;
+        color: #007bff;
+    }
+}
+
+
+
+
+@media (max-width:700px){
+    .product{
+        flex-direction: column;
+    }
+
+    .img img {
+        width: 300px;
+    }
+
+    .details p{
+        text-align: justify;
+    }
+}
+
+
+
